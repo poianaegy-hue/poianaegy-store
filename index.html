@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlTag">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بوانا إيجى - متجر المنظفات والعناية المنزلية والشخصية | Poiana Egy Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5ea832;        /* أخضر لوجو بوانا */
+      --primary-dark: #3f7721;   /* أخضر غامق */
+      --primary-soft: #f4fbf0;   /* خلفية ناعمة ونظيفة */
+      --border: #e2f2d9;
+      --card-border: #edf7e7;
+      --text: #263321;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--primary-soft);
+      color: var(--text);
+      padding-bottom: 100px;
+      font-family: 'Cairo', sans-serif;
+    }
+    body.lang-en { font-family: 'Inter', sans-serif; }
+
+    /* Header */
+    header {
+      background: #ffffff;
+      border-bottom: 2.5px solid var(--border);
+      padding: 12px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 18px rgba(94, 168, 50, 0.08);
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .brand-section {
+      display: flex;
+      align-items: center;
+    }
+    .brand-logo-img {
+      height: 52px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+      display: block;
+    }
+    @media (max-width: 480px) {
+      .brand-logo-img {
+        height: 42px;
+        max-width: 175px;
+      }
+    }
+
+    .lang-btn {
+      background: #f0fdf4;
+      color: var(--primary-dark);
+      border: 1.5px solid #bbf7d0;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover { background: #dcfce7; }
+
+    .hero-banner {
+      max-width: 1200px;
+      margin: 14px auto 0;
+      padding: 0 12px;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #ebfbee 0%, #fff5f5 100%);
+      border: 1px solid #dcfce7;
+      border-radius: 18px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 3px 12px rgba(94, 168, 50, 0.05);
+    }
+    .hero-content h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #1b380f;
+      margin-bottom: 4px;
+    }
+    .hero-content p {
+      font-size: 0.82rem;
+      color: #4b6343;
+      line-height: 1.4;
+    }
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .hero-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid #d1fae5;
+      color: #047857;
+    }
+    .hero-tag.pink {
+      background: #fff1f2;
+      border-color: #fecdd3;
+      color: #be123c;
+    }
+    .hero-visual {
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* قسم العروض المميزة */
+    .offers-section {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 0 12px;
+    }
+    .offers-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .offers-header h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #9a3412;
+    }
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+      gap: 14px;
+    }
+    @media(min-width: 768px) {
+      .offers-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+    }
+    .offer-card {
+      background: linear-gradient(135deg, #fffbeb 0%, #fff7ed 100%);
+      border-radius: 16px;
+      padding: 14px;
+      border: 1.5px solid #fed7aa;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(234, 88, 12, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .offer-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(234, 88, 12, 0.15);
+      border-color: #fb923c;
+    }
+    .badge-offer {
+      display: inline-block;
+      font-size: 0.72rem;
+      background: #ffedd5;
+      color: #c2410c;
+      padding: 3px 9px;
+      border-radius: 8px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      width: fit-content;
+      border: 1px solid #fed7aa;
+    }
+    .offer-img-box {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed #fed7aa;
+    }
+    .offer-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .offer-title { font-size: 0.92rem; font-weight: 800; color: #7c2d12; margin-bottom: 4px; min-height: 42px; line-height: 1.35; }
+    .offer-desc { font-size: 0.76rem; color: #9a3412; margin-bottom: 8px; }
+    .offer-price-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 8px; border-top: 1px dashed #fed7aa; }
+    .old-price { font-size: 0.8rem; text-decoration: line-through; color: #9ca3af; font-weight: 700; margin-left: 6px; }
+    .offer-price { font-size: 1.15rem; font-weight: 900; color: #c2410c; }
+    .offer-price span { font-size: 0.75rem; font-weight: 600; color: #9a3412; }
+    .offer-btn {
+      background: #ea580c;
+      color: white;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .offer-btn:hover { background: #c2410c; }
+
+    /* شريط البحث والتصنيفات */
+    .controls-container { max-width: 1200px; margin: 16px auto 0; padding: 0 12px; }
+    .search-input {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 25px;
+      border: 1.5px solid #cfead0;
+      outline: none;
+      font-size: 0.95rem;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(94, 168, 50, 0.05);
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(94, 168, 50, 0.2);
+    }
+    .categories-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0 4px;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .categories-bar::-webkit-scrollbar { display: none; }
+    .cat-btn {
+      background: white;
+      border: 1.5px solid #d8edd2;
+      padding: 8px 16px;
+      border-radius: 22px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #3b5235;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cat-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 3px 10px rgba(94, 168, 50, 0.35);
+    }
+
+    /* بطاقات المنتجات */
+    .products-container {
+      max-width: 1200px;
+      margin: 16px auto;
+      padding: 0 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+      gap: 14px;
+    }
+    @media(min-width: 768px) {
+      .products-container { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+    }
+    .product-card {
+      background: white;
+      border-radius: 16px;
+      padding: 14px;
+      border: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(94, 168, 50, 0.12);
+      border-color: #bbf7d0;
+    }
+    .p-img-box {
+      width: 100%;
+      height: 130px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      background: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .p-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .badge-cat {
+      display: inline-block;
+      font-size: 0.72rem;
+      background: #f0fdf4;
+      color: #166534;
+      padding: 3px 9px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      width: fit-content;
+      border: 1px solid #dcfce7;
+    }
+    .badge-cat.personal {
+      background: #fff1f2;
+      color: #9f1239;
+      border-color: #ffe4e6;
+    }
+    .p-title { font-size: 0.92rem; font-weight: 700; color: #1e293b; margin-bottom: 4px; min-height: 42px; line-height: 1.35; }
+    .p-desc { font-size: 0.76rem; color: #64748b; margin-bottom: 8px; }
+    .p-scent { font-size: 0.78rem; font-weight: 700; color: #047857; background: #ecfdf5; padding: 2px 7px; border-radius: 6px; width: fit-content; margin-bottom: 10px; border: 1px solid #d1fae5; }
+    .p-scent.pink { color: #be123c; background: #fff1f2; border-color: #fecdd3; }
+    .p-price-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 8px; border-top: 1px dashed #eef6ec; }
+    .p-price { font-size: 1.18rem; font-weight: 900; color: #1b380f; }
+    .p-price span { font-size: 0.75rem; font-weight: 600; color: #64748b; }
+    
+    .add-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .add-btn:hover { background: var(--primary-dark); }
+    .add-btn:active { transform: scale(0.96); }
+
+    .qty-controls { display: flex; align-items: center; gap: 6px; }
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      border: 1.5px solid #cfead0;
+      background: #f0fdf4;
+      color: #1b380f;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .qty-num { font-weight: 800; font-size: 0.92rem; min-width: 18px; text-align: center; color: #1b380f; }
+
+    /* شريط السلة السفلي */
+    .cart-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: white;
+      border-top: 2px solid #bbf7d0;
+      padding: 12px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 20px rgba(94, 168, 50, 0.12);
+      z-index: 99;
+    }
+    .cart-summary { display: flex; flex-direction: column; }
+    .cart-count { font-size: 0.8rem; color: #047857; font-weight: 700; }
+    .cart-total { font-size: 1.3rem; font-weight: 900; color: #1b380f; }
+    .checkout-btn {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 11px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(94, 168, 50, 0.3);
+    }
+
+    /* نافذة تأكيد الطلب */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(27, 56, 15, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 14px;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 20px;
+      padding: 22px;
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1.5px solid #d1fae5;
+    }
+    .modal h3 { margin-bottom: 12px; color: #1b380f; font-weight: 800; }
+    .order-items-list { max-height: 180px; overflow-y: auto; border: 1px solid #d1fae5; background: #f0fdf4; padding: 10px; border-radius: 10px; margin-bottom: 12px; font-size: 0.85rem; }
+    .order-item-row { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .form-group { margin-bottom: 10px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 4px; color: #1b380f; }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #cfead0;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(94, 168, 50, 0.15);
+    }
+    .wa-btn {
+      width: 100%;
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .close-modal {
+      width: 100%;
+      background: #f1f5f9;
+      color: #475569;
+      border: none;
+      padding: 9px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+  <style>
+  /* إخفاء شارة Netlify وإيقاف تحميلها نهائياً */
+  #netlify-badge, 
+  .netlify-badge, 
+  iframe[src*="netlify"], 
+  a[href*="netlify.com"],
+  div:has(> a[href*="netlify.com"]),
+  [id*="netlify"],
+  [class*="netlify"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <div class="brand-section">
+        <img src="222.jpg" alt="Poiana EGY - بوانا إيجى" class="brand-logo-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'" />
+      </div>
+      <button class="lang-btn" onclick="toggleLanguage()">
+        🌐 <span id="langBtnText">English</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="hero-banner">
+    <div class="hero-card">
+      <div class="hero-content">
+        <h2 id="heroHeading">نظافة تلمع.. وعناية تدوم 🌸</h2>
+        <p id="heroDesc">مطبخ يلمع، أطباق براقة، ملابس برائحة تدوم، وشاور جل غني برغوة منعشة تدلل يومك.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">🍽️ لمعان المطبخ والصحون</span>
+          <span class="hero-tag pink">🛁 دلال العناية الشخصية</span>
+          <span class="hero-tag">🧺 انتعاش الملابس والمنزل</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <span>✨</span>
+        <span>🧴</span>
+        <span>🌸</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- قسم العروض والخصومات الحصرية (6 عروض دقيقة حسب طلبك) -->
+  <section class="offers-section">
+    <div class="offers-header">
+      <span>🔥</span>
+      <h3 id="offersTitle">عروض وخصومات بوانا إيجي الحصرية</h3>
+    </div>
+    <div class="offers-grid">
+      
+      <!-- العرض الأول -->
+      <div class="offer-card">
+        <div>
+          <span class="badge-offer">عرض لفترة محدودة</span>
+          <div class="offer-img-box">
+            <img src="images/offer-1.jpg" alt="العرض الأول" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'">
+          </div>
+          <div class="offer-title">عرض تنظيف المطبخ المتكامل</div>
+          <div class="offer-desc">جركن شانا 5 لتر + مذيب دهون 500 ملل + كلورانو كلور أبيض 1 كجم + فلاش شانا 1 كجم (العميل يختار الروائح).</div>
+        </div>
+        <div class="offer-price-row">
+          <div>
+            <span class="old-price">286 ج.م</span>
+            <span class="offer-price">249.99 <span>ج.م</span></span>
+          </div>
+          <button class="offer-btn" onclick="addOfferToCart('عرض تنظيف المطبخ المتكامل', 249.99)">أضف للطلب +</button>
+        </div>
+      </div>
+
+      <!-- العرض الثاني -->
+      <div class="offer-card">
+        <div>
+          <span class="badge-offer">عناية شخصية</span>
+          <div class="offer-img-box">
+            <img src="images/offer-2.jpg" alt="العرض الثاني" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'">
+          </div>
+          <div class="offer-title">عرض الانتعاش والاسترخاء</div>
+          <div class="offer-desc">يشمك شاور جل 1 لتر + شيرا هاند ووش 500 ملل (العميل يختار الروائح).</div>
+        </div>
+        <div class="offer-price-row">
+          <div>
+            <span class="old-price">169 ج.م</span>
+            <span class="offer-price">149.99 <span>ج.م</span></span>
+          </div>
+          <button class="offer-btn" onclick="addOfferToCart('عرض الانتعاش والاسترخاء', 149.99)">أضف للطلب +</button>
+        </div>
+      </div>
+
+      <!-- العرض الثالث -->
+      <div class="offer-card">
+        <div>
+          <span class="badge-offer">توفير كبير</span>
+          <div class="offer-img-box">
+            <img src="images/offer-3.jpg" alt="العرض الثالث" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'">
+          </div>
+          <div class="offer-title">عرض لمعان المنزل والأرضيات</div>
+          <div class="offer-desc">شانا ملمع أخشاب 500 ملل + شانا معطر ومطهر أرضيات 2 لتر + جانجا ملمع زجاج 520 ملل (العميل يختار الروائح).</div>
+        </div>
+        <div class="offer-price-row">
+          <div>
+            <span class="old-price">181 ج.م</span>
+            <span class="offer-price">155 <span>ج.م</span></span>
+          </div>
+          <button class="offer-btn" onclick="addOfferToCart('عرض لمعان المنزل والأرضيات', 155)">أضف للطلب +</button>
+        </div>
+      </div>
+
+      <!-- العرض الرابع -->
+      <div class="offer-card">
+        <div>
+          <span class="badge-offer">عرض خاص</span>
+          <div class="offer-img-box">
+            <img src="images/offer-4.jpg" alt="العرض الرابع" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'">
+          </div>
+          <div class="offer-title">باقة غسالة الأطباق والتعقيم</div>
+          <div class="offer-desc">مسحوق غسالات أطباق شانا 1 كجم + شانا صابون أطباق 1 لتر + شيداتول بخاخ 520 ملل (العميل يختار الروائح).</div>
+        </div>
+        <div class="offer-price-row">
+          <div>
+            <span class="old-price">346 ج.م</span>
+            <span class="offer-price">280 <span>ج.م</span></span>
+          </div>
+          <button class="offer-btn" onclick="addOfferToCart('باقة غسالة الأطباق والتعقيم', 280)">أضف للطلب +</button>
+        </div>
+      </div>
+
+      <!-- العرض الخامس -->
+      <div class="offer-card">
+        <div>
+          <span class="badge-offer">الأكثر طلباً (أوتوماتيك)</span>
+          <div class="offer-img-box">
+            <img src="images/offer-5.jpg" alt="العرض الخامس" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'">
+          </div>
+          <div class="offer-title">مسحوق بيانكا أوتوماتيك (10 كجم)</div>
+          <div class="offer-desc">مسحوق بودرة بيانكا أوتوماتيك بحجم عائلي 10 كجم للغسالات الأوتوماتيك.</div>
+        </div>
+        <div class="offer-price-row">
+          <div>
+            <span class="old-price">600 ج.م</span>
+            <span class="offer-price">550 <span>ج.م</span></span>
+          </div>
+          <button class="offer-btn" onclick="addOfferToCart('مسحوق بيانكا أوتوماتيك 10 كجم', 550)">أضف للطلب +</button>
+        </div>
+      </div>
+
+      <!-- العرض السادس -->
+      <div class="offer-card">
+        <div>
+          <span class="badge-offer">عرض اقتصادي (عادي)</span>
+          <div class="offer-img-box">
+            <img src="images/offer-6.jpg" alt="العرض السادس" onerror="this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png'">
+          </div>
+          <div class="offer-title">مسحوق بيانكا العادي (10 كجم)</div>
+          <div class="offer-desc">مسحوق بيانكا العادي بحجم عائلي 10 كجم للغسالات العادية ونصف الأوتوماتيك.</div>
+        </div>
+        <div class="offer-price-row">
+          <div>
+            <span class="old-price">550 ج.م</span>
+            <span class="offer-price">520 <span>ج.م</span></span>
+          </div>
+          <button class="offer-btn" onclick="addOfferToCart('مسحوق بيانكا العادي 10 كجم', 520)">أضف للطلب +</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="controls-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="ابحثي عن منتج، رائحة معينة (ليمون، لافندر، عود، خوخ...)" oninput="filterProducts()" />
+    <div class="categories-bar" id="categoriesBar">
+      <button class="cat-btn active" data-cat="all" onclick="setCategory('all', this)">✨ الكل</button>
+      <button class="cat-btn" data-cat="kitchen" onclick="setCategory('kitchen', this)">🍽️ المطبخ والأطباق</button>
+      <button class="cat-btn" data-cat="personal" onclick="setCategory('personal', this)">🌸 العناية الشخصية</button>
+      <button class="cat-btn" data-cat="laundry" onclick="setCategory('laundry', this)">🧺 الملابس والغسيل</button>
+      <button class="cat-btn" data-cat="floors" onclick="setCategory('floors', this)">🏡 الأرضيات والمعطرات</button>
+      <button class="cat-btn" data-cat="disinfectants" onclick="setCategory('disinfectants', this)">🛡️ المطهرات والتعقيم</button>
+      <button class="cat-btn" data-cat="advanced" onclick="setCategory('advanced', this)">⚡ المنتجات المتخصصة</button>
+    </div>
+  </div>
+
+  <main class="products-container" id="productsGrid"></main>
+
+  <div class="cart-bar">
+    <div class="cart-summary">
+      <span class="cart-count" id="cartCount">0 أصناف في السلة</span>
+      <span class="cart-total" id="cartTotal">0.00 ج.م</span>
+    </div>
+    <button class="checkout-btn" id="btnCheckout" onclick="openCheckout()">إتمام الطلب عبر واتساب</button>
+  </div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content">
+      <h3 id="modalTitle">تأكيد طلبك المنزلي</h3>
+      <div class="order-items-list" id="modalItemsList"></div>
+      
+      <div class="form-group">
+        <label id="lblSelectNumber">إرسال الطلب إلى رقم الواتساب:</label>
+        <select id="waPhoneSelect">
+          <option value="201155583965">واتساب الإدارة: 01155583965</option>
+          <option value="201556864050">واتساب المبيعات: 01556864050</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label id="lblName">الاسم بالكامل:</label>
+        <input type="text" id="custName" placeholder="الاسم ثلاثي" required />
+      </div>
+
+      <div class="form-group">
+        <label id="lblPhone">رقم هاتف للتواصل:</label>
+        <input type="tel" id="custPhone" placeholder="رقم الموبايل" required />
+      </div>
+
+      <div class="form-group">
+        <label id="lblAddress">العنوان بالتفصيل للتوصيل:</label>
+        <input type="text" id="custAddress" placeholder="المدينة، المنطقة، الشارع، رقم العقار" required />
+      </div>
+
+      <button class="wa-btn" id="btnSendWa" onclick="sendOrderViaWhatsApp()">تأكيد وإرسال عبر واتساب الآن 📲</button>
+      <button class="close-modal" id="btnCloseModal" onclick="closeCheckout()">الرجوع لمواصلة التسوق</button>
+    </div>
+  </div>
+
+  <script>
+    let currentLang = 'ar';
+
+    const uiTexts = {
+      ar: {
+        heroHeading: "نظافة تلمع.. وعناية تدوم 🌸",
+        heroDesc: "مطبخ يلمع، أطباق براقة، ملابس برائحة تدوم، وشاور جل غني برغوة منعشة تدلل يومك.",
+        langSwitchBtn: "English",
+        searchPlaceholder: "ابحثي عن منتج، رائحة معينة (ليمون، لافندر، عود، خوخ...)",
+        currency: "ج.م",
+        addBtn: "أضف للطلب +",
+        scentLabel: "الرائحة:",
+        itemsSelected: "قطع مختارة",
+        cartEmptyAlert: "سلة الطلبات فارغة، يرجى اختيار المنتجات أولاً.",
+        checkoutBtn: "إتمام الطلب عبر واتساب 📲",
+        modalTitle: "تأكيد طلبك المنزلي",
+        selectNumber: "إرسال الطلب إلى رقم الواتساب:",
+        nameLabel: "الاسم بالكامل:",
+        namePlaceholder: "الاسم ثلاثي",
+        phoneLabel: "رقم هاتف للتواصل:",
+        phonePlaceholder: "رقم الموبايل",
+        addressLabel: "العنوان بالتفصيل للتوصيل:",
+        addressPlaceholder: "المدينة، المنطقة، الشارع، رقم العقار",
+        sendWaBtn: "تأكيد وإرسال عبر واتساب الآن 📲",
+        closeModalBtn: "الرجوع لمواصلة التسوق",
+        missingDataAlert: "يرجى ملء الاسم ورقم الهاتف والعنوان لتأكيد الطلب.",
+        opt1: "واتساب الإدارة: 01155583965",
+        opt2: "واتساب المبيعات: 01556864050",
+        noResults: "لا توجد منتجات مطابقة للبحث",
+        totalLabel: "الإجمالي:",
+        offersTitle: "عروض وخصومات بوانا إيجي الحصرية",
+        cats: {
+          all: "✨ الكل",
+          kitchen: "🍽️ المطبخ والأطباق",
+          personal: "🌸 العناية الشخصية",
+          laundry: "🧺 الملابس والغسيل",
+          floors: "🏡 الأرضيات والمعطرات",
+          disinfectants: "🛡️ المطهرات والتعقيم",
+          advanced: "⚡ المنتجات المتخصصة"
+        }
+      },
+      en: {
+        heroHeading: "Sparkling Clean Home & Fresh Personal Care 🌸",
+        heroDesc: "Gleaming dishes, fresh-scented laundry, and luxurious shower gels to pamper your day.",
+        langSwitchBtn: "عربي",
+        searchPlaceholder: "Search products or scents (Lemon, Lavender, Oud, Peach...)",
+        currency: "EGP",
+        addBtn: "Add to Cart +",
+        scentLabel: "Scent:",
+        itemsSelected: "items selected",
+        cartEmptyAlert: "Your cart is empty. Please add items first.",
+        checkoutBtn: "Complete Order via WhatsApp 📲",
+        modalTitle: "Confirm Your Order",
+        selectNumber: "Send order to WhatsApp number:",
+        nameLabel: "Full Name:",
+        namePlaceholder: "Your full name",
+        phoneLabel: "Contact Phone:",
+        phonePlaceholder: "Mobile number",
+        addressLabel: "Delivery Address:",
+        addressPlaceholder: "City, Street, Building No.",
+        sendWaBtn: "Confirm & Send via WhatsApp 📲",
+        closeModalBtn: "Back to Shop",
+        missingDataAlert: "Please fill in your name, phone number, and address.",
+        opt1: "Management WhatsApp: 01155583965",
+        opt2: "Sales WhatsApp: 01556864050",
+        noResults: "No matching products found",
+        totalLabel: "Total:",
+        offersTitle: "Exclusive Poiana Egy Offers & Discounts",
+        cats: {
+          all: "✨ All",
+          kitchen: "🍽️ Kitchen & Dishes",
+          personal: "🌸 Personal Care",
+          laundry: "🧺 Laundry & Clothes",
+          floors: "🏡 Floors & Fresheners",
+          disinfectants: "🛡️ Disinfectants",
+          advanced: "⚡ Specialized Products"
+        }
+      }
+    };
+
+    const catIcons = {
+      kitchen: "🍽️",
+      personal: "🌸",
+      laundry: "🧺",
+      floors: "🏡",
+      disinfectants: "🛡️",
+      advanced: "⚡"
+    };
+
+    // المنتجات الأساسية الـ 112
+    const products = [
+      {"id": 1, "cat": "kitchen", "price": 46.0, "ar": "شانا 1 لتر - أناناس", "en": "Shana 1 Litre - Pineapple", "scent_ar": "أناناس", "scent_en": "Pineapple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with pineapple scent", "img": "images/shana-pineapple-1l.jpg"},
+      {"id": 2, "cat": "kitchen", "price": 46.0, "ar": "شانا 1 لتر - تفاح", "en": "Shana 1 Litre - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with apple scent", "img": "images/shana-apple-1l.jpg"},
+      {"id": 3, "cat": "kitchen", "price": 46.0, "ar": "شانا 1 لتر - خوخ", "en": "Shana 1 Litre - Peach", "scent_ar": "خوخ", "scent_en": "Peach", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with peach scent", "img": "images/shana-peach-1l.jpg"},
+      {"id": 4, "cat": "kitchen", "price": 46.0, "ar": "شانا 1 لتر - ليمون", "en": "Shana 1 Litre - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with lemon scent", "img": "images/shana-lemon-1l.jpg"},
+      {"id": 5, "cat": "kitchen", "price": 46.0, "ar": "شانا 1 لتر - نعناع", "en": "Shana 1 Litre - Mint", "scent_ar": "نعناع", "scent_en": "Mint", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with mint scent", "img": "images/shana-mint-1l.jpg"},
+      {"id": 6, "cat": "kitchen", "price": 277.0, "ar": "شانا 10 لتر - أناناس", "en": "Shana 10 Litre - Pineapple", "scent_ar": "أناناس", "scent_en": "Pineapple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/shana-pineapple-10l.jpg"},
+      {"id": 7, "cat": "kitchen", "price": 277.0, "ar": "شانا 10 لتر - تفاح", "en": "Shana 10 Litre - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/shana-apple-10l.jpg"},
+      {"id": 8, "cat": "kitchen", "price": 277.0, "ar": "شانا 10 لتر - خوخ", "en": "Shana 10 Litre - Peach", "scent_ar": "خوخ", "scent_en": "Peach", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/shana-peach-10l.jpg"},
+      {"id": 9, "cat": "kitchen", "price": 277.0, "ar": "شانا 10 لتر - ليمون", "en": "Shana 10 Litre - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/shana-lemon-10l.jpg"},
+      {"id": 10, "cat": "kitchen", "price": 277.0, "ar": "شانا 10 لتر - نعناع", "en": "Shana 10 Litre - Mint", "scent_ar": "نعناع", "scent_en": "Mint", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/shana-mint-10l.jpg"},
+      {"id": 11, "cat": "kitchen", "price": 165.0, "ar": "شانا 5 لتر - أناناس", "en": "Shana 5 Litre - Pineapple", "scent_ar": "أناناس", "scent_en": "Pineapple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/shana-pineapple-5l.jpg"},
+      {"id": 12, "cat": "kitchen", "price": 165.0, "ar": "شانا 5 لتر - تفاح", "en": "Shana 5 Litre - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/shana-apple-5l.jpg"},
+      {"id": 13, "cat": "kitchen", "price": 165.0, "ar": "شانا 5 لتر - خوخ", "en": "Shana 5 Litre - Peach", "scent_ar": "خوخ", "scent_en": "Peach", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/shana-peach-5l.jpg"},
+      {"id": 14, "cat": "kitchen", "price": 165.0, "ar": "شانا 5 لتر - ليمون", "en": "Shana 5 Litre - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/shana-lemon-5l.jpg"},
+      {"id": 15, "cat": "kitchen", "price": 165.0, "ar": "شانا 5 لتر - نعناع", "en": "Shana 5 Litre - Mint", "scent_ar": "نعناع", "scent_en": "Mint", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/shana-mint-5l.jpg"},
+      {"id": 16, "cat": "kitchen", "price": 39.0, "ar": "شيليا 1 لتر - بلسم", "en": "Sheleya 1 Litre - Balsam", "scent_ar": "بلسم", "scent_en": "Balsam", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with balsam", "img": "images/sheleya-balsam-1l.jpg"},
+      {"id": 17, "cat": "kitchen", "price": 39.0, "ar": "شيليا 1 لتر - تفاح", "en": "Sheleya 1 Litre - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with apple", "img": "images/sheleya-apple-1l.jpg"},
+      {"id": 18, "cat": "kitchen", "price": 39.0, "ar": "شيليا 1 لتر - ليمون أخضر", "en": "Sheleya 1 Litre - Green Lemon", "scent_ar": "ليمون أخضر", "scent_en": "Green Lemon", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap green lemon", "img": "images/sheleya-green-lemon-1l.jpg"},
+      {"id": 19, "cat": "kitchen", "price": 39.0, "ar": "شيليا 1 لتر - نعناع", "en": "Sheleya 1 Litre - Mint", "scent_ar": "نعناع", "scent_en": "Mint", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap with mint", "img": "images/sheleya-mint-1l.jpg"},
+      {"id": 20, "cat": "kitchen", "price": 186.0, "ar": "شيليا 10 لتر - تفاح", "en": "Sheleya 10 Litre - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/sheleya-apple-10l.jpg"},
+      {"id": 21, "cat": "kitchen", "price": 186.0, "ar": "شيليا 10 لتر - ليمون", "en": "Sheleya 10 Litre - Green Lemon", "scent_ar": "ليمون", "scent_en": "Green Lemon", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/sheleya-lemon-10l.jpg"},
+      {"id": 22, "cat": "kitchen", "price": 186.0, "ar": "شيليا 10 لتر - نعناع", "en": "Sheleya 10 Litre - Mint", "scent_ar": "نعناع", "scent_en": "Mint", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 10L gallon", "img": "images/sheleya-mint-10l.jpg"},
+      {"id": 23, "cat": "kitchen", "price": 120.0, "ar": "شيليا 5 لتر - تفاح", "en": "Sheleya 5 Litre - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/sheleya-apple-5l.jpg"},
+      {"id": 24, "cat": "kitchen", "price": 120.0, "ar": "شيليا 5 لتر - ليمون", "en": "Sheleya 5 Litre - Green Lemon", "scent_ar": "ليمون", "scent_en": "Green Lemon", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/sheleya-lemon-5l.jpg"},
+      {"id": 25, "cat": "kitchen", "price": 120.0, "ar": "شيليا 5 لتر - نعناع", "en": "Sheleya 5 Litre - Mint", "scent_ar": "نعناع", "scent_en": "Mint", "desc_ar": "صابون سائل متعدد الأغراض ولجميع الأسطح برائحة", "desc_en": "Multi-purpose liquid dish soap 5L gallon", "img": "images/sheleya-mint-5l.jpg"},
+      {"id": 26, "cat": "kitchen", "price": 125.0, "ar": "شانا مساعد شطف لغسالات الأطباق 400 ملل", "en": "Shana Rinse Aid for Automatic Dishwashers 400ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "مساعد شطف غسالات اطباق", "desc_en": "Dishwasher rinse aid for spotless shine", "img": "images/shana-rinse-aid-400ml.jpg"},
+      {"id": 27, "cat": "kitchen", "price": 200.0, "ar": "شانا مسحوق غسالات الأطباق أوتوماتيك كلاسيك 1 كجم", "en": "Shana Automatic Dishwasher Powder Classic 1 Kg", "scent_ar": "-", "scent_en": "-", "desc_ar": "مسحوق لغسالات الأطباق", "desc_en": "Automatic dishwasher detergent powder classic", "img": "images/shana-dishwasher-powder-1kg.jpg"},
+      {"id": 28, "cat": "kitchen", "price": 220.0, "ar": "شانا مسحوق غسالات الأطباق أوتوماتيك ليمون أخضر 1 كجم", "en": "Shana Automatic Dishwasher Powder Green Lemon 1 Kg", "scent_ar": "ليمون أخضر", "scent_en": "Green Lemon", "desc_ar": "مسحوق لغسالات الأطباق", "desc_en": "Dishwasher powder with green lemon power", "img": "images/shana-dishwasher-powder-lemon-1kg.jpg"},
+      {"id": 29, "cat": "laundry", "price": 170.0, "ar": "بيانكا جل للملابس 2 لتر للغسالات الأوتوماتيك - فيوري", "en": "Bianca Laundry Gel, 2 Liters, for Automatic Washing Machines - Fiori", "scent_ar": "Fiori", "scent_en": "Fiori", "desc_ar": "جل منظف للملابس للغسالات الأوتوماتيك", "desc_en": "Automatic liquid laundry detergent - Fiori", "img": "images/bianca-gel-fiori-2l.jpg"},
+      {"id": 30, "cat": "laundry", "price": 170.0, "ar": "بيانكا جل للملابس 2 لتر للغسالات الأوتوماتيك - جارانتي", "en": "Bianca Laundry Gel, 2 Liters, for Automatic Washing Machines - Garanti", "scent_ar": "Garanti", "scent_en": "Garanti", "desc_ar": "جل منظف للملابس للغسالات الأوتوماتيك", "desc_en": "Automatic liquid laundry detergent - Garanti", "img": "images/bianca-gel-garanti-2l.jpg"},
+      {"id": 31, "cat": "laundry", "price": 170.0, "ar": "بيانكا جل للملابس 2 لتر للغسالات الأوتوماتيك - ليلاك", "en": "Bianca Laundry Gel, 2 Liters, for Automatic Washing Machines - Lilac", "scent_ar": "Lilac", "scent_en": "Lilac", "desc_ar": "جل منظف للملابس للغسالات الأوتوماتيك", "desc_en": "Automatic liquid laundry detergent - Lilac", "img": "images/bianca-gel-lilac-2l.jpg"},
+      {"id": 32, "cat": "laundry", "price": 115.0, "ar": "بيانكا جل للملابس السوداء 2 لتر للغسالات الأوتوماتيك", "en": "Bianca Gel for Black Clothes, 2 Liters, for Automatic Washing Machines", "scent_ar": "-", "scent_en": "-", "desc_ar": "جل منظف للملابس السوداء للغسالات الأوتوماتيك", "desc_en": "Special black care liquid detergent auto", "img": "images/bianca-black-gel-2l.jpg"},
+      {"id": 33, "cat": "laundry", "price": 210.0, "ar": "بيانكا جل للملابس 3 لتر للغسالات الأوتوماتيك - فيوري", "en": "Bianca Laundry Gel, 3 Liters, for Automatic Washing Machines - Fiori", "scent_ar": "Fiori", "scent_en": "Fiori", "desc_ar": "جل منظف للملابس للغسالات الأوتوماتيك", "desc_en": "Automatic liquid laundry detergent 3L - Fiori", "img": "images/bianca-gel-fiori-3l.jpg"},
+      {"id": 34, "cat": "laundry", "price": 210.0, "ar": "بيانكا جل للملابس 3 لتر للغسالات الأوتوماتيك - جارانتي", "en": "Bianca Laundry Gel, 3 Liters, for Automatic Washing Machines - Garanti", "scent_ar": "Garanti", "scent_en": "Garanti", "desc_ar": "جل منظف للملابس للغسالات الأوتوماتيك", "desc_en": "Automatic liquid laundry detergent 3L - Garanti", "img": "images/bianca-gel-garanti-3l.jpg"},
+      {"id": 35, "cat": "laundry", "price": 210.0, "ar": "بيانكا جل للملابس 3 لتر للغسالات الأوتوماتيك - ليلاك", "en": "Bianca Laundry Gel, 3 Liters, for Automatic Washing Machines - Lilac", "scent_ar": "Lilac", "scent_en": "Lilac", "desc_ar": "جل منظف للملابس للغسالات الأوتوماتيك", "desc_en": "Automatic liquid laundry detergent 3L - Lilac", "img": "images/bianca-gel-lilac-3l.jpg"},
+      {"id": 36, "cat": "laundry", "price": 105.0, "ar": "بيانكا جل للملابس السوداء 2 لتر للغسالات النصف أوتوماتيك والعادية", "en": "Bianca Gel for Black Clothes, 2 Liters, for Semi-Automatic Wash", "scent_ar": "-", "scent_en": "-", "desc_ar": "جل منظف للملابس السوداء للغسالات العادية", "desc_en": "Black clothes liquid detergent semi-auto", "img": "images/bianca-black-gel-semi-2l.jpg"},
+      {"id": 37, "cat": "laundry", "price": 115.0, "ar": "بيانكا جل للملابس 2 لتر للغسالات النصف أوتوماتيك - جارانتي", "en": "Bianca Laundry Gel, 2 Liters, for Semi-Automatic Washing Machines", "scent_ar": "-", "scent_en": "-", "desc_ar": "جل منظف للملابس للغسالات العادية", "desc_en": "Semi-automatic laundry detergent gel", "img": "images/bianca-gel-garanti-semi-2l.jpg"},
+      {"id": 38, "cat": "laundry", "price": 55.0, "ar": "بيانكا مسحوق للغسالات الأوتوماتيك عالي التركيز بالكيلو جرام", "en": "Bianca concentrated powder for automatic washing machines 1 Kg", "scent_ar": "-", "scent_en": "-", "desc_ar": "مسحوق غسالات عالي التركيز", "desc_en": "High concentration powder detergent auto", "img": "images/bianca-powder-auto-1kg.jpg"},
+      {"id": 39, "cat": "laundry", "price": 45.0, "ar": "بيانكا مسحوق للغسالات النصف أوتوماتيك عالي التركيز بالكيلو جرام", "en": "Bianca concentrated powder detergent for semi-automatic washing machine 1 Kg", "scent_ar": "-", "scent_en": "-", "desc_ar": "مسحوق غسالات عالي التركيز", "desc_en": "High concentration powder semi-auto", "img": "images/bianca-powder-semi-1kg.jpg"},
+      {"id": 40, "cat": "laundry", "price": 63.0, "ar": "بيانكا منعم أنسجة 1 لتر - فيوري", "en": "Bianca Fabric Softener 1L - Fiori", "scent_ar": "Fiori", "scent_en": "Fiori", "desc_ar": "منعم ومعطر للملابس", "desc_en": "Fabric conditioner softener - Fiori", "img": "images/bianca-softener-fiori-1l.jpg"},
+      {"id": 41, "cat": "laundry", "price": 63.0, "ar": "بيانكا منعم أنسجة 1 لتر - جارانتي", "en": "Bianca Fabric Softener 1L - Garanti", "scent_ar": "Garanti", "scent_en": "Garanti", "desc_ar": "منعم ومعطر للملابس", "desc_en": "Fabric conditioner softener - Garanti", "img": "images/bianca-softener-garanti-1l.jpg"},
+      {"id": 42, "cat": "laundry", "price": 63.0, "ar": "بيانكا منعم أنسجة 1 لتر - ليلاك", "en": "Bianca Fabric Softener 1L - Lilac", "scent_ar": "Lilac", "scent_en": "Lilac", "desc_ar": "منعم ومعطر للملابس", "desc_en": "Fabric conditioner softener - Lilac", "img": "images/bianca-softener-lilac-1l.jpg"},
+      {"id": 43, "cat": "laundry", "price": 48.0, "ar": "كلورانو ألوان كجم مزيل بقع للملابس الملونة", "en": "Chlorano 1 Kg Stain Remover for Colored Clothes", "scent_ar": "-", "scent_en": "-", "desc_ar": "مزيل بقع للملابس الملونة", "desc_en": "Stain remover for colored clothes 1 Kg", "img": "images/chlorano-colors-1kg.jpg"},
+      {"id": 44, "cat": "laundry", "price": 24.0, "ar": "كلورانو كلور للملابس البيضاء 1 كجم", "en": "Chlorano Bleach for White Clothes 1 Kg", "scent_ar": "-", "scent_en": "-", "desc_ar": "كلور مبيض آمن على الغسالات الأوتوماتيك", "desc_en": "Bleach for white clothes 1 Kg", "img": "images/chlorano-white-1kg.jpg"},
+      {"id": 45, "cat": "laundry", "price": 26.0, "ar": "كلورانو كلور للملابس البيضاء 1 كجم 2* - برائحة اللافندر", "en": "Chlorano Bleach for White Clothes, 1 Kg (2 in 1) - Lavender", "scent_ar": "لافندر", "scent_en": "Lavender", "desc_ar": "كلور مبيض آمن على الغسالات الأوتوماتيك", "desc_en": "Bleach for whites 2-in-1 lavender", "img": "images/chlorano-white-lavender-1kg.jpg"},
+      {"id": 46, "cat": "laundry", "price": 26.0, "ar": "كلورانو كلور للملابس البيضاء 1 كجم 2* - برائحة الليمون", "en": "Chlorano Bleach for White Clothes, 1 Kg (2 in 1) - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "كلور مبيض آمن على الغسالات الأوتوماتيك", "desc_en": "Bleach for whites 2-in-1 lemon", "img": "images/chlorano-white-lemon-1kg.jpg"},
+      {"id": 52, "cat": "disinfectants", "price": 28.0, "ar": "شانا فنيك 500 ملل", "en": "Shana Fenik 500 ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "فنيك مطهر عالي التركيز", "desc_en": "Concentrated black phenic disinfectant", "img": "images/shana-fenik-500ml.jpg"},
+      {"id": 53, "cat": "disinfectants", "price": 80.0, "ar": "شيداتول بخاخ 520 ملل", "en": "Shedatol Spray 520 ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "إستخدام مباشر للتعقيم", "desc_en": "Direct sanitizing antiseptic spray", "img": "images/shedatol-spray-520ml.jpg"},
+      {"id": 55, "cat": "disinfectants", "price": 50.0, "ar": "شيداتول مركز 250 ملل", "en": "Shedatol Concentrated 250 ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "مطهر مركز يحتاج إلى التخفيف", "desc_en": "Antiseptic disinfectant concentrated", "img": "images/shedatol-conc-250ml.jpg"},
+      {"id": 57, "cat": "disinfectants", "price": 82.0, "ar": "شيداتول مركز 500 ملل", "en": "Shedatol Concentrated 500 ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "مطهر مركز يحتاج إلى التخفيف", "desc_en": "Antiseptic disinfectant concentrated", "img": "images/shedatol-conc-500ml.jpg"},
+      {"id": 58, "cat": "disinfectants", "price": 42.0, "ar": "كلورانو بخاخ لتعقيم الأسطح كلاسيك 500 ملل", "en": "Chlorano Surface Sanitizing Spray, Bleach-based, 500 ml - Classic", "scent_ar": "-", "scent_en": "-", "desc_ar": "كلور معقم للأسطح إستخدام مباشر", "desc_en": "Chlorine surface sanitizing spray", "img": "images/chlorano-spray-classic-500ml.jpg"},
+      {"id": 59, "cat": "disinfectants", "price": 48.0, "ar": "كلورانو بخاخ لتعقيم الأسطح لافندر 500 ملل", "en": "Chlorano Surface Sanitizing Spray, Bleach-based, 500 ml - Lavender", "scent_ar": "لافندر", "scent_en": "Lavender", "desc_ar": "كلور معقم للأسطح إستخدام مباشر", "desc_en": "Chlorine surface spray lavender", "img": "images/chlorano-spray-lavender-500ml.jpg"},
+      {"id": 60, "cat": "disinfectants", "price": 48.0, "ar": "كلورانو بخاخ لتعقيم الأسطح ليمون 500 ملل", "en": "Chlorano Surface Sanitizing Spray, Bleach-based, 500 ml - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "كلور معقم للأسطح إستخدام مباشر", "desc_en": "Chlorine surface spray lemon", "img": "images/chlorano-spray-lemon-500ml.jpg"},{"id": 65, "cat": "floors", "price": 38.0, "ar": "جانجا ملمع زجاج 520 ملل - أكوا", "en": "Janja Glass Cleaner 520 ml - Aqua", "scent_ar": "أكوا", "scent_en": "Aqua", "desc_ar": "ملمع زجاج بخاخ", "desc_en": "Glass cleaner spray Aqua", "img": "images/janja-glass-aqua-520ml.jpg"},
+      {"id": 66, "cat": "floors", "price": 38.0, "ar": "جانجا ملمع زجاج 520 ملل - تفاح", "en": "Janja Glass Cleaner 520 ml - Apple", "scent_ar": "تفاح", "scent_en": "Apple", "desc_ar": "ملمع زجاج بخاخ", "desc_en": "Glass cleaner spray Apple", "img": "images/janja-glass-apple-520ml.jpg"},
+      {"id": 67, "cat": "floors", "price": 38.0, "ar": "جانجا ملمع زجاج 520 ملل - لافندر", "en": "Janja Glass Cleaner 520 ml - Lavender", "scent_ar": "لافندر", "scent_en": "Lavender", "desc_ar": "ملمع زجاج بخاخ", "desc_en": "Glass cleaner spray Lavender", "img": "images/janja-glass-lavender-520ml.jpg"},
+      {"id": 68, "cat": "floors", "price": 38.0, "ar": "جانجا ملمع زجاج 520 ملل - ليمون", "en": "Janja Glass Cleaner 520 ml - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "ملمع زجاج بخاخ", "desc_en": "Glass cleaner spray Lemon", "img": "images/janja-glass-lemon-520ml.jpg"},
+      {"id": 69, "cat": "floors", "price": 83.0, "ar": "شانا منظف وملمع للأرضيات 2 لتر - تروبيكال", "en": "Shana Floor 2 Litre - Tropical", "scent_ar": "تروبيكال", "scent_en": "Tropical", "desc_ar": "مطهر وملمع ومعطر للأرضيات", "desc_en": "Floor cleaner and disinfectant Tropical", "img": "images/shana-floor-tropical-2l.jpg"},
+      {"id": 70, "cat": "floors", "price": 83.0, "ar": "شانا منظف وملمع للأرضيات 2 لتر - عود", "en": "Shana Floor 2 Litre - Oud", "scent_ar": "عود", "scent_en": "Oud", "desc_ar": "مطهر وملمع ومعطر للأرضيات", "desc_en": "Floor cleaner and disinfectant Oud", "img": "images/shana-floor-oud-2l.jpg"},
+      {"id": 71, "cat": "floors", "price": 83.0, "ar": "شانا منظف وملمع للأرضيات 2 لتر - فلورال", "en": "Shana Floor 2 Litre - Floral", "scent_ar": "فلورال", "scent_en": "Floral", "desc_ar": "مطهر وملمع ومعطر للأرضيات", "desc_en": "Floor cleaner and disinfectant Floral", "img": "images/shana-floor-floral-2l.jpg"},
+      {"id": 72, "cat": "floors", "price": 83.0, "ar": "شانا منظف وملمع للأرضيات 2 لتر - لافندر", "en": "Shana Floor 2 Litre - Lavender", "scent_ar": "لافندر", "scent_en": "Lavender", "desc_ar": "مطهر وملمع ومعطر للأرضيات", "desc_en": "Floor cleaner and disinfectant Lavender", "img": "images/shana-floor-lavender-2l.jpg"},
+      {"id": 76, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - خوخ", "en": "Shantal Air Freshener 500 ml - Peach", "scent_ar": "خوخ", "scent_en": "Peach", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Peach", "img": "images/shantal-air-peach-500ml.jpg"},
+      {"id": 77, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - رومانس", "en": "Shantal Air Freshener 500 ml - Romance", "scent_ar": "رومانس", "scent_en": "Romance", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Romance", "img": "images/shantal-air-romance-500ml.jpg"},
+      {"id": 78, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - فل", "en": "Shantal Air Freshener 500 ml - Foll", "scent_ar": "فل", "scent_en": "Foll", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Foll", "img": "images/shantal-air-foll-500ml.jpg"},
+      {"id": 79, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - سحر الليالي", "en": "Shantal Air Freshener 500 ml - The Magic of the Night", "scent_ar": "سحر الليالي", "scent_en": "The Magic of the Night", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Night Magic", "img": "images/shantal-air-night-500ml.jpg"},
+      {"id": 81, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - توت", "en": "Shantal Air Freshener 500 ml - Raspberry", "scent_ar": "توت", "scent_en": "Raspberry", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Raspberry", "img": "images/shantal-air-raspberry-500ml.jpg"},
+      {"id": 82, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - عود", "en": "Shantal Air Freshener 500 ml - Oud", "scent_ar": "عود", "scent_en": "Oud", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Oud", "img": "images/shantal-air-oud-500ml.jpg"},
+      {"id": 83, "cat": "floors", "price": 60.0, "ar": "شانتال معطر جو 500 ملل - ليمون", "en": "Shantal Air Freshener 500 ml - Lemon", "scent_ar": "ليمون", "scent_en": "Lemon", "desc_ar": "معطر جو بخاخ طويل الثبات", "desc_en": "Long lasting room air freshener Lemon", "img": "images/shantal-air-lemon-500ml.jpg"},
+      {"id": 84, "cat": "personal", "price": 60.0, "ar": "شيرا صابون منظف لليدين 500 ملل - برتقال", "en": "Shira Handwash 500 ml - Orange", "scent_ar": "برتقال", "scent_en": "Orange", "desc_ar": "هاندووش صابون سائل منظف لليدين برائحة", "desc_en": "Gentle hand wash soap Orange", "img": "images/shira-handwash-orange-500ml.jpg"},
+      {"id": 85, "cat": "personal", "price": 60.0, "ar": "شيرا صابون منظف لليدين 500 ملل - تونكا", "en": "Shira Handwash 500 ml - Tonka", "scent_ar": "تونكا", "scent_en": "Tonka", "desc_ar": "هاندووش صابون سائل منظف لليدين برائحة", "desc_en": "Gentle hand wash soap Tonka", "img": "images/shira-handwash-tonka-500ml.jpg"},
+      {"id": 86, "cat": "personal", "price": 60.0, "ar": "شيرا صابون منظف لليدين 500 ملل - فلورال", "en": "Shira Handwash 500 ml - Floral", "scent_ar": "فلورال", "scent_en": "Floral", "desc_ar": "هاندووش صابون سائل منظف لليدين برائحة", "desc_en": "Gentle hand wash soap Floral", "img": "images/shira-handwash-floral-500ml.jpg"},
+      {"id": 87, "cat": "personal", "price": 60.0, "ar": "شيرا صابون منظف لليدين 500 ملل - كريز", "en": "Shira Handwash 500 ml - Cherry", "scent_ar": "كريز", "scent_en": "Cherry", "desc_ar": "هاندووش صابون سائل منظف لليدين برائحة", "desc_en": "Gentle hand wash soap Cherry", "img": "images/shira-handwash-cherry-500ml.jpg"},
+      {"id": 88, "cat": "personal", "price": 60.0, "ar": "شيرا صابون منظف لليدين 500 ملل - مانجو", "en": "Shira Handwash 500 ml - Mango", "scent_ar": "مانجو", "scent_en": "Mango", "desc_ar": "هاندووش صابون سائل منظف لليدين برائحة", "desc_en": "Gentle hand wash soap Mango", "img": "images/shira-handwash-mango-500ml.jpg"},
+      {"id": 96, "cat": "personal", "price": 110.0, "ar": "يشمك شاور جل استحمام 1 لتر - توت", "en": "Yashmak Shower Gel 1 Litre - Raspberry", "scent_ar": "توت", "scent_en": "Raspberry", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Refreshing shower body gel Raspberry", "img": "images/yashmak-shower-raspberry-1l.jpg"},
+      {"id": 97, "cat": "personal", "price": 110.0, "ar": "يشمك شاور جل استحمام 1 لتر - عود", "en": "Yashmak Shower Gel 1 Litre - Oud", "scent_ar": "عود", "scent_en": "Oud", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Luxurious shower body gel Oud", "img": "images/yashmak-shower-oud-1l.jpg"},
+      {"id": 98, "cat": "personal", "price": 110.0, "ar": "يشمك شاور جل استحمام 1 لتر - ليدي كاميليا", "en": "Yashmak Shower Gel 1 Litre - Lady Camilia", "scent_ar": "ليدي كاميليا", "scent_en": "Lady Camilia", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Shower body gel Lady Camilia", "img": "images/yashmak-shower-camilia-1l.jpg"},
+      {"id": 99, "cat": "personal", "price": 110.0, "ar": "يشمك شاور جل استحمام 1 لتر - مستيك", "en": "Yashmak Shower Gel 1 Litre - Mystique", "scent_ar": "مستيك", "scent_en": "Mystique", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Shower body gel Mystique", "img": "images/yashmak-shower-mystique-1l.jpg"},
+      {"id": 100, "cat": "personal", "price": 110.0, "ar": "يشمك شاور جل استحمام 1 لتر - رومانس", "en": "Yashmak Shower Gel 1 Litre - Romance", "scent_ar": "رومانس", "scent_en": "Romance", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Shower body gel Romance", "img": "images/yashmak-shower-romance-1l.jpg"},
+      {"id": 101, "cat": "personal", "price": 66.0, "ar": "يشمك شاور جل استحمام 500 ملل - توت", "en": "Yashmak Shower Gel 500 ml - Raspberry", "scent_ar": "توت", "scent_en": "Raspberry", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Refreshing shower body gel Raspberry", "img": "images/yashmak-shower-raspberry-500ml.jpg"},
+      {"id": 102, "cat": "personal", "price": 66.0, "ar": "يشمك شاور جل استحمام 500 ملل - عود", "en": "Yashmak Shower Gel 500 ml - Oud", "scent_ar": "عود", "scent_en": "Oud", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Luxurious shower body gel Oud", "img": "images/yashmak-shower-oud-500ml.jpg"},
+      {"id": 103, "cat": "personal", "price": 66.0, "ar": "يشمك شاور جل استحمام 500 ملل - ليدي كاميليا", "en": "Yashmak Shower Gel 500 ml - Lady Camilia", "scent_ar": "ليدي كاميليا", "scent_en": "Lady Camilia", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Shower body gel Lady Camilia", "img": "images/yashmak-shower-camilia-500ml.jpg"},
+      {"id": 104, "cat": "personal", "price": 66.0, "ar": "يشمك شاور جل استحمام 500 ملل - مستيك", "en": "Yashmak Shower Gel 500 ml - Mystique", "scent_ar": "مستيك", "scent_en": "Mystique", "desc_ar": "شاور جل إستحمام منظف للجسم", "desc_en": "Shower body gel Mystique", "img": "images/yashmak-shower-mystique-500ml.jpg"},
+      {"id": 105, "cat": "advanced", "price": 107.0, "ar": "بيانكا شامبو منظف السجاد 2 لتر", "en": "Bianca Carpet Shampoo 2 Liters", "scent_ar": "-", "scent_en": "-", "desc_ar": "منظف وملمع سجاد عالي الفعالية", "desc_en": "Carpet and upholstery shampoo", "img": "images/bianca-carpet-shampoo-2l.jpg"},
+      {"id": 107, "cat": "advanced", "price": 28.0, "ar": "شانا فلاش 1 كجم", "en": "Shana Flash 1 Kg", "scent_ar": "-", "scent_en": "-", "desc_ar": "فلاش منظف فائق للأسطح والسيراميك", "desc_en": "Strong flash surface cleaner", "img": "images/shana-flash-1kg.jpg"},
+      {"id": 109, "cat": "advanced", "price": 69.0, "ar": "شانا مذيب دهون وشحوم 500 ملل", "en": "Shana Degreaser 500ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "مذيب للدهون والشحوم بخاخ", "desc_en": "Heavy duty grease remover spray", "img": "images/shana-degreaser-500ml.jpg"},
+      {"id": 112, "cat": "advanced", "price": 60.0, "ar": "شانا ملمع أخشاب وباركيه 500 ملل", "en": "Shana Wood and Parquet Polish 500 ml", "scent_ar": "-", "scent_en": "-", "desc_ar": "ملمع أخشاب وباركيه", "desc_en": "Wood and parquet polish spray", "img": "images/shana-wood-polish-500ml.jpg"}
+    ];
+
+    let currentCategory = 'all';
+    let cart = {};
+
+    function toggleLanguage() {
+      currentLang = (currentLang === 'ar') ? 'en' : 'ar';
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const t = uiTexts[currentLang];
+      const isAr = (currentLang === 'ar');
+      
+      document.getElementById('htmlTag').setAttribute('lang', currentLang);
+      document.getElementById('htmlTag').setAttribute('dir', isAr ? 'rtl' : 'ltr');
+      document.body.className = isAr ? '' : 'lang-en';
+
+      document.getElementById('heroHeading').innerText = t.heroHeading;
+      document.getElementById('heroDesc').innerText = t.heroDesc;
+      document.getElementById('langBtnText').innerText = t.langSwitchBtn;
+      document.getElementById('searchInput').placeholder = t.searchPlaceholder;
+      document.getElementById('btnCheckout').innerText = t.checkoutBtn;
+      document.getElementById('offersTitle').innerText = t.offersTitle;
+      
+      document.getElementById('modalTitle').innerText = t.modalTitle;
+      document.getElementById('lblSelectNumber').innerText = t.selectNumber;
+      document.getElementById('lblName').innerText = t.nameLabel;
+      document.getElementById('custName').placeholder = t.namePlaceholder;
+      document.getElementById('lblPhone').innerText = t.phoneLabel;
+      document.getElementById('custPhone').placeholder = t.phonePlaceholder;
+      document.getElementById('lblAddress').innerText = t.addressLabel;
+      document.getElementById('custAddress').placeholder = t.addressPlaceholder;
+      document.getElementById('btnSendWa').innerText = t.sendWaBtn;
+      document.getElementById('btnCloseModal').innerText = t.closeModalBtn;
+
+      const sel = document.getElementById('waPhoneSelect');
+      sel.options[0].text = t.opt1;
+      sel.options[1].text = t.opt2;
+
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        const catKey = btn.getAttribute('data-cat');
+        if (t.cats[catKey]) btn.innerText = t.cats[catKey];
+      });
+
+      updateCartUI();
+      filterProducts();
+    }
+
+    function renderProducts(itemsToRender) {
+      const grid = document.getElementById('productsGrid');
+      const t = uiTexts[currentLang];
+      const isAr = (currentLang === 'ar');
+      grid.innerHTML = '';
+      
+      if (itemsToRender.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #3f7721; font-weight: 700;">${t.noResults}</div>`;
+        return;
+      }
+
+      itemsToRender.forEach(p => {
+        const qty = cart[p.id] || 0;
+        const catName = t.cats[p.cat] || p.cat;
+        const pName = isAr ? p.ar : p.en;
+        const pDesc = isAr ? p.desc_ar : p.desc_en;
+        const pScent = isAr ? p.scent_ar : p.scent_en;
+        const isPersonal = p.cat === 'personal';
+
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <span class="badge-cat ${isPersonal ? 'personal' : ''}">${catName}</span>
+            </div>
+            <div class="p-img-box">
+              <img src="${p.img}" alt="${pName}" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/995/995053.png';">
+            </div>
+            <div class="p-title">${pName}</div>
+            <div class="p-desc">${pDesc}</div>
+            ${pScent !== '-' ? `<div class="p-scent ${isPersonal ? 'pink' : ''}">${t.scentLabel} ${pScent}</div>` : ''}
+          </div>
+          <div class="p-price-row">
+            <div class="p-price">${p.price.toFixed(2)} <span>${t.currency}</span></div>
+            ${qty === 0 ? 
+              `<button class="add-btn" onclick="addToCart(${p.id})">${t.addBtn}</button>` :
+              `<div class="qty-controls">
+                <button class="qty-btn" onclick="updateQty(${p.id}, -1)">-</button>
+                <span class="qty-num">${qty}</span>
+                <button class="qty-btn" onclick="updateQty(${p.id}, 1)">+</button>
+              </div>`
+            }
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function setCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterProducts();
+    }
+
+    function filterProducts() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const filtered = products.filter(p => {
+        const matchesCat = (currentCategory === 'all' || p.cat === currentCategory);
+        const matchesQuery = p.ar.toLowerCase().includes(q) || 
+                             p.en.toLowerCase().includes(q) || 
+                             p.scent_ar.toLowerCase().includes(q) || 
+                             p.scent_en.toLowerCase().includes(q);
+        return matchesCat && matchesQuery;
+      });
+      renderProducts(filtered);
+    }
+
+    function addToCart(id) {
+      cart[id] = 1;
+      updateCartUI();
+      filterProducts();
+    }
+
+    // إضافة عرض للسلة
+    function addOfferToCart(offerName, price) {
+      cart[offerName] = (cart[offerName] || 0) + 1;
+      updateCartUI();
+      alert(`تم إضافة (${offerName}) إلى السلة بنجاح! 🛒`);
+    }
+
+    function updateQty(id, delta) {
+      if (!cart[id]) return;
+      cart[id] += delta;
+      if (cart[id] <= 0) delete cart[id];
+      updateCartUI();
+      filterProducts();
+    }
+
+    function updateCartUI() {
+      const t = uiTexts[currentLang];
+      let totalCount = 0;
+      let totalPrice = 0;
+      
+      for (const key in cart) {
+        let price = 0;
+        const prod = products.find(x => x.id == key);
+        if (prod) {
+          price = prod.price;
+        } else {
+          if (key.includes('عرض تنظيف المطبخ')) price = 249.99;
+          else if (key.includes('عرض الانتعاش')) price = 149.99;
+          else if (key.includes('عرض لمعان المنزل')) price = 155;
+          else if (key.includes('باقة غسالة الأطباق')) price = 280;
+          else if (key.includes('مسحوق بيانكا أوتوماتيك')) price = 550;
+          else if (key.includes('مسحوق بيانكا العادي')) price = 520;
+        }
+        totalCount += cart[key];
+        totalPrice += cart[key] * price;
+      }
+
+      document.getElementById('cartCount').innerText = `${totalCount} ${t.itemsSelected}`;
+      document.getElementById('cartTotal').innerText = `${totalPrice.toFixed(2)} ${t.currency}`;
+    }
+
+    function openCheckout() {
+      const t = uiTexts[currentLang];
+      const keys = Object.keys(cart);
+      if (keys.length === 0) {
+        alert(t.cartEmptyAlert);
+        return;
+      }
+      const list = document.getElementById('modalItemsList');
+      list.innerHTML = '';
+      let total = 0;
+      
+      keys.forEach(key => {
+        let pName = key;
+        let price = 0;
+        const prod = products.find(x => x.id == key);
+        if (prod) {
+          pName = (currentLang === 'ar') ? prod.ar : prod.en;
+          price = prod.price;
+        } else {
+          if (key.includes('عرض تنظيف المطبخ')) price = 249.99;
+          else if (key.includes('عرض الانتعاش')) price = 149.99;
+          else if (key.includes('عرض لمعان المنزل')) price = 155;
+          else if (key.includes('باقة غسالة الأطباق')) price = 280;
+          else if (key.includes('مسحوق بيانكا أوتوماتيك')) price = 550;
+          else if (key.includes('مسحوق بيانكا العادي')) price = 520;
+        }
+        const sub = price * cart[key];
+        total += sub;
+        list.innerHTML += `
+          <div class="order-item-row">
+            <span>⭐ ${pName} (×${cart[key]})</span>
+            <strong>${sub.toFixed(2)} ${t.currency}</strong>
+          </div>
+        `;
+      });
+      list.innerHTML += `<hr style="margin: 8px 0; border: none; border-top: 1px dashed #bbf7d0;"><div class="order-item-row" style="font-weight: 800; font-size: 1.05rem; color: #1b380f;"><span>${t.totalLabel}</span><span>${total.toFixed(2)} ${t.currency}</span></div>`;
+      document.getElementById('checkoutModal').style.display = 'flex';
+    }
+
+    function closeCheckout() {
+      document.getElementById('checkoutModal').style.display = 'none';
+    }
+
+    function sendOrderViaWhatsApp() {
+      const t = uiTexts[currentLang];
+      const isAr = (currentLang === 'ar');
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+      const targetPhone = document.getElementById('waPhoneSelect').value;
+
+      if (!name || !phone || !address) {
+        alert(t.missingDataAlert);
+        return;
+      }
+
+      let itemsText = "";
+      let total = 0;
+      Object.keys(cart).forEach((key, idx) => {
+        let pName = key;
+        let price = 0;
+        const prod = products.find(x => x.id == key);
+        if (prod) {
+          pName = isAr ? prod.ar : prod.en;
+          price = prod.price;
+        } else {
+          if (key.includes('عرض تنظيف المطبخ')) price = 249.99;
+          else if (key.includes('عرض الانتعاش')) price = 149.99;
+          else if (key.includes('عرض لمعان المنزل')) price = 155;
+          else if (key.includes('باقة غسالة الأطباق')) price = 280;
+          else if (key.includes('مسحوق بيانكا أوتوماتيك')) price = 550;
+          else if (key.includes('مسحوق بيانكا العادي')) price = 520;
+        }
+        const sub = price * cart[key];
+        total += sub;
+        itemsText += `${idx + 1}. ${pName} × ${cart[key]} = ${sub.toFixed(2)} ${t.currency}\n`;
+      });
+
+      const message = isAr
+        ? `السلام عليكم ورحمة الله وبركاته،\nأرغب في تأكيد طلب شراء (عروض ومنتجات) من شركة بوانا إيجى:\n\n*الطلبات والعروض المختارة:*\n${itemsText}\n*إجمالي الحساب:* ${total.toFixed(2)} ج.م\n\n*بيانات العميل والتوصيل:*\n- الاسم: ${name}\n- هاتف التواصل: ${phone}\n- العنوان: ${address}\n\nبرجاء تأكيد ميعاد التوصيل، شكراً لكم!`
+        : `Hello,\nI would like to place an order (Offers & Products) from Poiana Egy:\n\n*Selected Items & Offers:*\n${itemsText}\n*Total Amount:* ${total.toFixed(2)} EGP\n\n*Customer Details:*\n- Name: ${name}\n- Phone: ${phone}\n- Address: ${address}\n\nPlease confirm availability and delivery time. Thank you!`;
+
+      const encodedUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`;
+      window.open(encodedUrl, '_blank');
+      closeCheckout();
+    }
+
+    applyLanguage();
+  <script>
+  // كود إزالة شارة Netlify فور تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const badge = document.getElementById('netlify-badge') || document.querySelector('a[href*="netlify.com"]');
+    if (badge) {
+      badge.remove();
+    }
+    // مراقبة الصفحة في حال ظهرت الشارة لاحقاً
+    const observer = new MutationObserver((mutations, obs) => {
+      const netlifyElement = document.querySelector('a[href*="netlify.com"]') || document.getElementById('netlify-badge');
+      if (netlifyElement) {
+        netlifyElement.remove();
+        obs.disconnect();
+      }
+    });
+    observer.observe(document, { childList: true, subtree: true });
+  });
+</script>
+</body>
+</html>
